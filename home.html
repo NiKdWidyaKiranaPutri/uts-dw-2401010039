@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Dream Bakery</title>
+  <link href='/style.css' rel='stylesheet'>
+
+  <style>
+    /* Caption Section Styles */
+.caption {
+    background-color: #800000; 
+    color: #ffffff; 
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    max-width: 800px; 
+    margin: 50px auto; 
+}
+.caption-content h2 {
+    font-size: 2.5rem; 
+    color: #feeaea; 
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+.caption-content p {
+    font-size: 1.2rem; 
+    line-height: 1.8; 
+    margin: 20px 0;
+}
+.caption-content b {
+    color: #ffdab9; 
+    font-weight: bold;
+}
+.caption-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.caption-content ul li {
+    margin: 10px 0;
+}
+.caption-content ul li::before {
+    content: '🍰'; 
+    margin-right: 10px;
+}
+.caption-content a {
+    color: #f7ebeb; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+.caption-content a:hover {
+    color: #ffdab9; 
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    .caption {padding: 20px 10px;}
+    .caption-content h2 { font-size: 2rem;}
+    .caption-content p { font-size: 1rem;}
+}
+
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logoContent">
+        <a href="#"><img src="Images home/logo.jpg" alt=""></a>
+    </div>
+    <h1>Dream Bakery</h1>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li>
+          <a href="#">Menu</a>
+          <ul class="dropdown">
+            <li><a href="/cakemenu.html">Cake</a></li>
+            <li><a href="cupcakemenu.html">Cupcake</a></li>
+            <li><a href="/donutmenu.html">Donut</a></li>
+            <li><a href="/cookiesmenu.html">Cookies</a></li>
+          </ul>
+        </li>
+        <li><a href="/contactus.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+<!--Home section start here-->
+<section class="home" id="home">
+    <div class="homeContent">
+      <h2>Wellcome to Our Bakery</h2>
+      <button onclick="window.location.href='/index.html'">See More</button>
+    </div>
+    <div class="slideshow-container">
+      <div class="slide-fade">
+        <img src="Images home/cake.jpg" alt="image1">
+      </div>
+      <div class="slide-fade">
+        <img src="Images home/cupcake.jpg" alt="image2">
+      </div>
+      <div class="slide-fade">
+        <img src="Images home/donut.jpg" alt="image3">
+      </div>
+      <div class="slide-fade">
+        <img src="Images home/cookies.jpg" alt="image3">
+      </div>
+    </div>
+  </section>
+  <!--home section end here-->
+
+  <!--caption-->
+  <section class="caption">
+    <div class="caption-content">
+      <h2>Dream Bakery</h2>
+      <p> 
+        <b>Hadirkan Kebahagiaan dalam Setiap Gigitan</b><br>
+        Kami percaya bahwa setiap momen bisa menjadi lebih istimewa
+        dengan sentuhan manis dari Dream Bakery.<br>
+        Dari cake yang memikat hingga donat yang empuk,<br>
+        kami siap memanjakan lidah Anda dengan berbagai pilihan lezat<br>
+        <br>
+        <b>Pilihan Terbaik dari Dream Bakery :</b><br>
+🍰 Cake<br>
+Cocok untuk berbagai perayaan atau sekadar memanjakan diri.<br>
+Cake kami dibuat dengan bahan berkualitas premium dan sentuhan kreatif yang memukau.<br>
+🧁 Cupcake<br>
+Kecil, manis, dan penuh cinta.<br>
+Cupcake kami hadir dalam berbagai rasa dan topping menarik yang sempurna<br>
+untuk hadiah atau camilan sehari-hari.<br>
+🍪 Cookies<br>
+Renyah di luar, lembut di dalam.<br>
+Cookies kami dibuat dengan resep tradisional untuk rasa yang selalu bikin rindu.<br>
+🍩 Donat<br>
+Donat yang empuk dan lezat,<br>
+tersedia dalam berbagai rasa dan topping favorit Anda.<br>
+Pilihan sempurna untuk menemani secangkir kopi atau teh.<br>
+<br>
+<b>Kenapa Memilih Dream Bakery?</b><br>
+Bahan Berkualitas: <br>
+Setiap produk dibuat dari bahan segar dan alami.<br>
+Cita Rasa Istimewa: <br>
+Resep khas yang dirancang untuk memanjakan setiap pelanggan.<br>
+Pilihan Beragam:<br>
+Temukan kue favorit Anda dari cake, cupcake, cookies, hingga donat.<br>
+Pesan Online: <br>
+Nikmati kemudahan memesan dari rumah Anda.<br>
+      </p>
+    </div>
+  </section>
+
+  <script>
+    var slideIndex = 1;
+    SlideShow();
+
+    function SlideShow() {
+      var i;
+      var slides = document.getElementsByClassName("slide-fade");
+      
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      
+      slides[slideIndex - 1].style.display = "block";
+      slideIndex++;
+      setTimeout(SlideShow, 3000); // Change image every 3 seconds
+    }
+  </script>
+  </body>
