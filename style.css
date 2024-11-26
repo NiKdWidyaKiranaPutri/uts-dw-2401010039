@@ -15,8 +15,8 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    padding: 1.4rem 7%;
-    z-index: 999;
+    padding: 1rem 7%;
+    z-index: 900;
 }
 .header.logoContent{
     display: flex;
@@ -31,6 +31,7 @@
         padding: 1rem;
     }
 }
+
  h1{
     display: flex;
     align-items: center;
@@ -89,6 +90,7 @@ nav ul a:hover{
     font-size:  15px;
     color: #5e5e5e;
   }
+
 .home {
 min-height: 80vh;
 display: flex;
@@ -128,6 +130,7 @@ img{
     100%{opacity: 1;}
 }
 
+
 .menu{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -148,6 +151,11 @@ img{
 .menuContent h4{
     padding: 5px;
     text-align: center;
+}
+.menuContent p{
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
 }
 .menuContent button{
     padding: 5px 30px;
@@ -177,6 +185,8 @@ img{
         grid-template-columns: 1fr;
     }
 }
+
+
 .contact{
     min-height:100vh;
     background-color: burlywood;
@@ -255,15 +265,11 @@ button:hover{
     color: #7d2828;
 }
 @media screen and(max-width:768px){
-    .container{
-        padding:20px;
-    }
-    .contact-wrapper{
-        grid-template-columns: 1fr;
-    }
-    .contact-form{
-        text-align: center;
-    }
+    .container{ padding:20px;  }
+    .contact-wrapper{ grid-template-columns: 1fr; }
+    .contact-form{ text-align: center; }
 }
+
+
 
 
